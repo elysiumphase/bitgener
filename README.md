@@ -43,7 +43,7 @@ The aim of this project is to provide a simple, lightweight, zero-depency and fa
 
 # Bitgener Online Demo
 
-[www.bitgener.io](Bitgener)
+[Show me!](https://bitgener.herokuapp.com/)
 
 # Installation
 
