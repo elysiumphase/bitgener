@@ -9,6 +9,7 @@
 # Table of Contents
 - [Presentation](#presentation)
 - [Bitgener Online Demo](#bitgener-online-demo)
+- [Installation](#installation)
 - [Supported symbologies](#supported-symbologies)
 - [Usage](#usage)
   - [Library](#library)
