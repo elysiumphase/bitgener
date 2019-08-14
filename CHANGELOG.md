@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.1.1 - delivery @14/08/2019
+
+- add package keywords
+
 ## 1.1.0 - delivery @14/08/2019
 
 - fix settings to be set with undefined values if missing
