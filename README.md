@@ -455,7 +455,7 @@ const convert = async function convert({
 ## Node.js
 
 - Language: JavaScript ES6/ES7
-- VM: NodeJS v8 and higher
+- VM: NodeJS Carbon (v8.17.0) and higher
 
 ## Debugging
 
