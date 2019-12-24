@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.1.2 - delivery @24/12/2019
+
+- fix engines in package
+- fix dependency security issue
+- update readme
+
 ## 1.1.1 - delivery @14/08/2019
 
 - add package keywords
