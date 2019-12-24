@@ -1,6 +1,6 @@
 {
   "name": "bitgener",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A lightweight and zero-dependencies pure Node.js barcode library",
   "author": "Adrien Valcke",
   "main": "lib/index.js",
@@ -9,8 +9,8 @@
   "analyze": false,
   "license": "MIT",
   "engines": {
-    "node": "10.16.2",
-    "npm": "6.9.0"
+    "node": ">=8.17.0",
+    "npm": ">=6.13.4"
   },
   "scripts": {
     "test:lint": "eslint lib/",
@@ -24,6 +24,7 @@
   "keywords": [
     "node.js",
     "node js",
+    "node",
     "bitgener",
     "barcode",
     "bar code",
