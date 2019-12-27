@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.1.3 - delivery @27/12/2019
+
+- change engines in package
+- use stream.pipeline in stream helper to avoid memory leaks
+- update output helper
+- update readme
+
 ## 1.1.2 - delivery @24/12/2019
 
 - fix engines in package
