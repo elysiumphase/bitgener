@@ -190,6 +190,8 @@ const bitgener = require('bitgener');
 
 ### Examples
 
+In these examples please prefer a well-known and tested asynchronous logger over the use of *console* module.
+
 ##### 1D barcode
 
 ```javascript
@@ -219,8 +221,6 @@ const bitgener = require('bitgener');
     });
 
     console.log(ret);
-
-    // shows
   } catch (e) {
     console.error(e.toString());
   }
@@ -255,8 +255,6 @@ const bitgener = require('bitgener');
     });
 
     console.log(ret);
-
-    // shows
   } catch (e) {
     console.error(e.toString());
   }
@@ -266,11 +264,8 @@ const bitgener = require('bitgener');
 ##### Full example using Sharp
 
 ```javascript
-const { createWriteStream } = require('fs');
 const sharp = require('sharp');
 const bitgener = require('bitgener');
-
-const wstream = createWriteStream('sharped.png');
 
 /**
  * Generic function to convert the svg generated from Bitgener
@@ -312,6 +307,11 @@ const convert = async function convert({
 // then use it in an async function
 (async () => {
   try {
+    const stream = require('stream');
+    const { promisify } = require('util');
+
+    const wstream = stream.createWriteStream('sharped.png');
+    const pipeline = promisify(stream.pipeline);
     const {
       svg: buffer,
       density,
@@ -341,9 +341,10 @@ const convert = async function convert({
       format: 'png',
     });
 
-    rstream.pipe(wstream);
+    // listen to rstream and wstream error events ;)
 
-    // listen to rstream and wstream events ;)
+    // use pipeline to automatically clean up streams or you're exposing your code to memory leaks
+    await pipeline(rstream, wstream);
 
     // ...
   } catch (e) {
@@ -360,7 +361,23 @@ const convert = async function convert({
   - `DEBUG=bitgener*` will debug all Bitgener modules that could use the debugger.
   - `DEBUG=*` will debug all Bitgener modules that could use the debugger plus other modules used in your project if they use an equivalent debugger.
 
-## Error codes
+## Error
+
+### Object structure
+
+Errors emitted by Bitgener inherit the native Error prototype.
+
+```javascript
+{
+  name,
+  code,
+  message,
+  stack,
+  toString(),
+}
+```
+
+### Codes
 
 <table style="text-align: center; vertical-align: center">
   <tr>
@@ -455,7 +472,7 @@ const convert = async function convert({
 ## Node.js
 
 - Language: JavaScript ES6/ES7
-- VM: NodeJS Carbon (v8.17.0) and higher
+- VM: NodeJS v10.0.0 and higher
 
 ## Debugging
 
