@@ -24,8 +24,6 @@ const bitgener = require('../../lib');
     });
 
     console.log(ret);
-
-    // shows
   } catch (e) {
     console.error(e.toString());
   }

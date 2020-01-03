@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.1.4 - delivery @03/01/2020
+
+- update doc examples
+- update readme
+
 ## 1.1.3 - delivery @27/12/2019
 
 - change engines in package
