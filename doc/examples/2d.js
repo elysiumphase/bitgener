@@ -1,3 +1,4 @@
+const path = require('path');
 const bitgener = require('../../lib');
 
 (async () => {
@@ -5,7 +6,7 @@ const bitgener = require('../../lib');
     const ret = await bitgener({
       data: 'Bitgener',
       type: 'datamatrix',
-      output: 'bitgener.svg',
+      output: path.join(__dirname, 'bitgener.svg'),
       encoding: 'utf8',
       rectangular: true,
       padding: 0,
@@ -23,8 +24,6 @@ const bitgener = require('../../lib');
     });
 
     console.log(ret);
-
-    // shows
   } catch (e) {
     console.error(e.toString());
   }
