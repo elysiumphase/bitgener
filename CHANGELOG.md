@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.2.0 - delivery @15/01/2020
+
+- add opacity and bgOpacity options
+- add opacity and bgOpacity to helpers.barcode.digitToSvg svg generation algorithm
+- update default settings
+- update Readme and doc examples
+
 ## 1.1.5 - delivery @15/01/2020
 
 - add "files" key to package.json to lighten npm package

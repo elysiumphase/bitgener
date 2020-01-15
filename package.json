@@ -1,6 +1,6 @@
 {
   "name": "bitgener",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "A lightweight and zero-dependencies pure Node.js barcode library",
   "author": "Adrien Valcke",
   "main": "lib/index.js",
