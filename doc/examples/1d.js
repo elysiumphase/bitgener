@@ -14,7 +14,9 @@ const bitgener = require('../../lib');
       original1DSize: true,
       addQuietZone: true,
       color: '#FFFFFF',
+      opacity: 1,
       bgColor: '#F7931A',
+      bgOpacity: 0.1,
       hri: {
         show: true,
         fontFamily: 'Futura',

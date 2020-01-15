@@ -13,8 +13,10 @@ const bitgener = require('../../lib');
       width: 250,
       height: 250,
       original2DSize: false,
-      color: '#FFFFFF',
+      color: 'black',
+      opacity: 1,
       bgColor: '#F7931A',
+      bgOpacity: 0,
       hri: {
         show: true,
         fontFamily: 'Courier New',
