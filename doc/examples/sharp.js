@@ -66,7 +66,9 @@ const convert = async function convert({
       height: 250,
       original2DSize: false,
       color: '#FFFFFF',
+      opacity: 1,
       bgColor: '#F7931A',
+      bgOpacity: 1,
       hri: {
         show: true,
         fontFamily: 'Courier New',
