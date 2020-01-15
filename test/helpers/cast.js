@@ -1,5 +1,5 @@
 const { expect } = require('../Common');
-const { cast: { num, number, int, integer } } = require('../../helpers');
+const { cast: { num, number, int, integer } } = require('../../lib/helpers');
 
 describe('#helpers cast', function() {
   context('when using number', function() {

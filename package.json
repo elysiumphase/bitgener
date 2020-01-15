@@ -1,6 +1,6 @@
 {
   "name": "bitgener",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A lightweight and zero-dependencies pure Node.js barcode library",
   "author": "Adrien Valcke",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test:lint": "eslint lib/",
-    "test:unit": "NODE_ENV=test mocha lib/test/* --exit",
+    "test:unit": "NODE_ENV=test mocha test/* --exit",
     "test": "npm run test:lint && npm run test:unit"
   },
   "repository": {
@@ -43,6 +43,10 @@
     "code128",
     "codabar",
     "msi"
+  ],
+  "files": [
+    "lib",
+    "doc"
   ],
   "dependencies": {},
   "devDependencies": {
