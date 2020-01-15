@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.1.5 - delivery @15/01/2020
+
+- add "files" key to package.json to lighten npm package
+- test directory is now outside lib
+- update Readme
+
 ## 1.1.4 - delivery @03/01/2020
 
 - update doc examples

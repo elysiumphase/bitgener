@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="doc/examples/bitgener.svg" alt="Bitgener" style="border-radius:50%"/>
+  <img src="doc/bitgener.svg" alt="Bitgener" style="border-radius:50%"/>
 <p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 - [Usage](#usage)
   - [Library](#library)
     - [Import Bitgener](#import-bitgener)
-    - [bitgener(options): AsyncFunction](#bitgener-options-AsyncFunction)
+    - [bitgener(options): AsyncFunction](#bitgeneroptions-AsyncFunction)
     - [Examples](#examples)
       - [1D barcode](#1d-barcode)
       - [2D barcode](#2d-barcode)
