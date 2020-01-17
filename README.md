@@ -10,6 +10,12 @@
 - [Presentation](#presentation)
 - [Bitgener Online Demo](#bitgener-online-demo)
 - [Installation](#installation)
+- [Technical information](#technical-information)
+  - [Node.js](#node.js)
+  - [Debugging](#debugging)
+  - [Tests](#tests)
+    - [Linting](#linting)
+    - [Unit](#unit)
 - [Supported symbologies](#supported-symbologies)
 - [Usage](#usage)
   - [Library](#library)
@@ -20,13 +26,9 @@
       - [2D barcode](#2d-barcode)
       - [Full example using Sharp](#full-example-using-sharp)
   - [Environment variables](#environment-variables)
-  - [Error codes](#error-codes)
-- [Technical information](#technical-information)
-  - [Node.js](#node.js)
-  - [Debugging](#debugging)
-  - [Tests](#tests)
-    - [Linting](#linting)
-    - [Unit](#unit)
+  - [Errors](#errors)
+    - [Object structure](#object-structure)
+    - [Codes](#codes)
 - [Development](#development)
 - [Licence](#licence)
 
@@ -49,6 +51,37 @@ The aim of this project is to provide a simple, lightweight, zero-depency and fa
 # Installation
 
 `npm install bitgener`
+
+`npm i -S bitgener`
+
+# Technical information
+
+## Node.js
+
+- Language: JavaScript ES6/ES7
+- VM: Node.js >=10.0.0
+
+## Debugging
+
+- Own debugger embedded that writes on *process.stderr* when the *DEBUG* environment variable is set. See [Environment variables](#environment-variables).
+
+## Tests
+
+Command to run all tests:
+
+`npm test`
+
+### Linting
+
+ESLint with Airbnb base rules. See [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+
+`npm run test:lint`
+
+### Unit
+
+Mocha and Chai.
+
+`npm run test:unit`
 
 # Supported symbologies
 
@@ -377,7 +410,7 @@ const convert = async function convert({
   - `DEBUG=bitgener*` will debug all Bitgener modules that could use the debugger.
   - `DEBUG=*` will debug all Bitgener modules that could use the debugger plus other modules used in your project if they use an equivalent debugger.
 
-## Error
+## Errors
 
 ### Object structure
 
@@ -481,36 +514,6 @@ Errors emitted by Bitgener inherit the native Error prototype.
     <td>lib/helpers/output</td>
   </tr>
 </table>
-
-
-# Technical information
-
-## Node.js
-
-- Language: JavaScript ES6/ES7
-- VM: NodeJS v10.0.0 and higher
-
-## Debugging
-
-- Own debugger embedded that writes on *process.stderr* when the *DEBUG* environment variable is set.
-
-## Tests
-
-Command to run all tests:
-
-`npm test`
-
-### Linting
-
-ESLint with Airbnb base rules.
-
-`npm run test:lint`
-
-### Unit
-
-Mocha and Chai.
-
-`npm run test:unit`
 
 # Development
 
