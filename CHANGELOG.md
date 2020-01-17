@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.2 - delivery @17/01/2020
+
+- update logo and description
+
 ## 1.2.1 - delivery @17/01/2020
 
 - update Readme
