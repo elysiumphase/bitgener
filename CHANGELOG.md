@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.1 - delivery @17/01/2020
+
+- update Readme
+
 ## 1.2.0 - delivery @15/01/2020
 
 - add opacity and bgOpacity options
