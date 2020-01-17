@@ -3,7 +3,7 @@
 <p>
 
 <p align="center">
-  A lightweight and zero-dependencies pure Node.js barcode library.
+  A lightweight and zero-dependencies pure Node.js barcode generator.
 <p>
 
 # Table of Contents
@@ -34,7 +34,7 @@
 
 # Presentation
 
-*Bitgener* is a barcode library written in pure Node.js using ES6 and ES7 features. It is based on the great work made by Jean-Baptiste Demonte and contributors: [barcode](https://github.com/jbdemonte/barcode).
+*Bitgener* is a barcode generator written in pure Node.js using ES6 and ES7 features. It is based on the great work made by Jean-Baptiste Demonte and contributors: [barcode](https://github.com/jbdemonte/barcode).
 
 Despite the fact that [bwipjs](https://github.com/metafloor/bwip-js) can generate a lot of barcodes and other libraries exist, I personally needed to generate the same ECC 200 compliant Datamatrixes from the *barcode* library and it was not possible by any of these libraries. Plus I had some issues with architecture-dependent image processor libraries used by other modules.
 
