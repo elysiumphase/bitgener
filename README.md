@@ -26,7 +26,7 @@
       - [2D barcode](#2d-barcode)
       - [Full example using Sharp](#full-example-using-sharp)
   - [Environment variables](#environment-variables)
-  - [Errors](#error)
+  - [Errors](#errors)
     - [Object structure](#object-structure)
     - [Codes](#codes)
 - [Development](#development)
