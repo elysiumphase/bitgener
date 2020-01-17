@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="doc/bitgener.svg" alt="Bitgener" style="border-radius:50%"/>
+  <img src="doc/bitgener.png" alt="Bitgener"/>
 <p>
 
 <p align="center">
