@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.3 - delivery @21/01/2020
+
+- fix readme anchors
+
 ## 1.2.2 - delivery @17/01/2020
 
 - update logo and description

@@ -20,7 +20,7 @@
 - [Usage](#usage)
   - [Library](#library)
     - [Import Bitgener](#import-bitgener)
-    - [bitgener(options): AsyncFunction](#bitgeneroptions-AsyncFunction)
+    - [bitgener(options): AsyncFunction](#bitgeneroptions-asyncfunction)
     - [Examples](#examples)
       - [1D barcode](#1d-barcode)
       - [2D barcode](#2d-barcode)
