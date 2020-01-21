@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.4 - delivery @21/01/2020
+
+- update datamatrix utils module name
+
 ## 1.2.3 - delivery @21/01/2020
 
 - fix readme anchors
