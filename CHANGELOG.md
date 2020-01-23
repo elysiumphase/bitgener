@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.5 - delivery @23/01/2020
+
+- update readme svg to SVG and contribution message
+
 ## 1.2.4 - delivery @21/01/2020
 
 - update datamatrix utils module name
