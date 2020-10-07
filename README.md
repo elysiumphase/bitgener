@@ -11,7 +11,7 @@
 - [Bitgener Online Demo](#bitgener-online-demo)
 - [Installation](#installation)
 - [Technical information](#technical-information)
-  - [Node.js](#node.js)
+  - [Node.js](#nodejs)
   - [Debugging](#debugging)
   - [Tests](#tests)
     - [Linting](#linting)
