@@ -1,6 +1,6 @@
 {
   "name": "bitgener",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "A lightweight and zero-dependencies pure Node.js barcode generator",
   "author": "Adrien Valcke <adrienvalcke@icloud.com> (https://github.com/adrienv1520)",
   "main": "lib/index.js",
@@ -45,15 +45,14 @@
     "msi"
   ],
   "files": [
-    "lib",
-    "doc"
+    "lib"
   ],
   "dependencies": {},
   "devDependencies": {
-    "chai": "~4.1.2",
-    "eslint": "~5.9.0",
-    "eslint-config-airbnb-base": "~13.1.0",
-    "eslint-plugin-import": "~2.14.0",
-    "mocha": "~5.1.1"
+    "chai": "~4.2.0",
+    "eslint": "~7.9.0",
+    "eslint-config-airbnb-base": "~14.2.0",
+    "eslint-plugin-import": "~2.22.0",
+    "mocha": "~8.1.3"
   }
 }
