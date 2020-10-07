@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.2.6 - delivery @07/10/2020
+
+- update debugger
+- add debugger tests
+- add github community files
+- update dev dependencies
+- update readme
+
 ## 1.2.5 - delivery @23/01/2020
 
 - update readme svg to SVG and contribution message

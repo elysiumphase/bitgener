@@ -5,7 +5,7 @@ const bitgener = require('../../lib');
     const ret = await bitgener({
       data: '012345',
       type: 'code93',
-      output: 'buffer',
+      output: 'stream',
       encoding: 'utf8',
       crc: false,
       padding: 25,
