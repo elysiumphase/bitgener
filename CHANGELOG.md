@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.7 - delivery @08/10/2020
+
+- fix Ean codes so they are built from right to left and not the opposite
+
 ## 1.2.6 - delivery @07/10/2020
 
 - update debugger
