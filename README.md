@@ -419,7 +419,7 @@ Example: `DEBUG=bitgener:*`
 
 ### Object structure
 
-Errors emitted by Bitgener inherit the native Error prototype.
+Errors emitted by *Bitgener* inherit the native Error prototype with an additional `code` property and `toString` method.
 
 ```javascript
 {
