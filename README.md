@@ -518,6 +518,16 @@ Errors emitted by Bitgener inherit the native Error prototype.
     <td>Internal failure writing or piping data on writable stream.</td>
     <td>lib/helpers/output</td>
   </tr>
+
+  <tr>
+    <td rowspan="2"><i>LibError</i></td>
+  </tr>
+
+  <tr>
+    <td>UNKNOWN_ERROR</td>
+    <td>An unknown error was caught by the library.</td>
+    <td>-</td>
+  </tr>
 </table>
 
 # Code of Conduct

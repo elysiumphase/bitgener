@@ -1,6 +1,6 @@
 {
   "name": "bitgener",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "A lightweight and zero-dependencies pure Node.js barcode generator",
   "author": "Adrien Valcke <adrienvalcke@icloud.com> (https://github.com/adrienv1520)",
   "main": "lib/index.js",
