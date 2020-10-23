@@ -1,7 +1,114 @@
 const { expect } = require('../Common');
-const { cast: { num, number, int, integer } } = require('../../lib/helpers');
+const { cast: { str, num, number, int, integer } } = require('../../lib/helpers');
 
 describe('#helpers cast', function() {
+  context('when using str', function() {
+    it('should return the primitive string value of a string', function() {
+      expect(str('')).to.be.a('string').and.to.equals('').and.to.not.be.an('object');
+      expect(str('  ')).to.be.a('string').and.to.equals('  ').and.to.not.be.an('object');
+      expect(str('s')).to.be.a('string').and.to.equals('s').and.to.not.be.an('object');
+      expect(str("")).to.be.a('string').and.to.equals("").and.to.not.be.an('object');
+      expect(str("  ")).to.be.a('string').and.to.equals("  ").and.to.not.be.an('object');
+      expect(str("s")).to.be.a('string').and.to.equals("s").and.to.not.be.an('object');
+      expect(str(new String(''))).to.be.a('string').and.to.equals('').and.to.not.be.an('object');
+      expect(str(new String('  '))).to.be.a('string').and.to.equals('  ').and.to.not.be.an('object');
+      expect(str(new String('s'))).to.be.a('string').and.to.equals('s').and.to.not.be.an('object');
+      expect(str(new String(""))).to.be.a('string').and.to.equals("").and.to.not.be.an('object');
+      expect(str(new String("  "))).to.be.a('string').and.to.equals("  ").and.to.not.be.an('object');
+      expect(str(new String("s"))).to.be.a('string').and.to.equals("s").and.to.not.be.an('object');
+      expect(str(String(''))).to.be.a('string').and.to.equals('').and.to.not.be.an('object');
+      expect(str(String('  '))).to.be.a('string').and.to.equals('  ').and.to.not.be.an('object');
+      expect(str(String('s'))).to.be.a('string').and.to.equals('s').and.to.not.be.an('object');
+      expect(str(String(""))).to.be.a('string').and.to.equals("").and.to.not.be.an('object');
+      expect(str(String("  "))).to.be.a('string').and.to.equals("  ").and.to.not.be.an('object');
+      expect(str(String("s"))).to.be.a('string').and.to.equals("s").and.to.not.be.an('object');
+    });
+
+    it('should return the primitive string representation of a number', function() {
+      expect(str(0)).to.be.a('string').and.to.equals('0').and.to.not.be.an('object');
+      expect(str(1)).to.be.a('string').and.to.equals('1').and.to.not.be.an('object');
+      expect(str(5)).to.be.a('string').and.to.equals('5').and.to.not.be.an('object');
+      expect(str(new Number(0))).to.be.a('string').and.to.equals('0').and.to.not.be.an('object');
+      expect(str(new Number(1))).to.be.a('string').and.to.equals('1').and.to.not.be.an('object');
+      expect(str(new Number(5))).to.be.a('string').and.to.equals('5').and.to.not.be.an('object');
+      expect(str(Number(0))).to.be.a('string').and.to.equals('0').and.to.not.be.an('object');
+      expect(str(Number(1))).to.be.a('string').and.to.equals('1').and.to.not.be.an('object');
+      expect(str(Number(5))).to.be.a('string').and.to.equals('5').and.to.not.be.an('object');
+      expect(str(5.5)).to.be.a('string').and.to.equals('5.5').and.to.not.be.an('object');
+      expect(str(Infinity)).to.be.a('string').and.to.equals('Infinity').and.to.not.be.an('object');
+      expect(str(0xFF)).to.be.a('string').and.to.equals('255').and.to.not.be.an('object');
+      expect(str(0b111110111)).to.be.a('string').and.to.equals('503').and.to.not.be.an('object');
+      expect(str(0o767)).to.be.a('string').and.to.equals('503').and.to.not.be.an('object');
+    });
+
+    it('should return the primitive string representation of a boolean', function() {
+      expect(str(true)).to.be.a('string').and.to.equals('true').and.to.not.be.an('object');
+      expect(str(false)).to.be.a('string').and.to.equals('false').and.to.not.be.an('object');
+      expect(str(new Boolean(true))).to.be.a('string').and.to.equals('true').and.to.not.be.an('object');
+      expect(str(new Boolean(false))).to.be.a('string').and.to.equals('false').and.to.not.be.an('object');
+      expect(str(Boolean(1))).to.be.a('string').and.to.equals('true').and.to.not.be.an('object');
+      expect(str(Boolean(0))).to.be.a('string').and.to.equals('false').and.to.not.be.an('object');
+    });
+
+    it('should return the primitive string representation of a symbol', function() {
+      expect(str(Symbol('s'))).to.be.a('string').and.to.equals('Symbol(s)').and.to.not.be.an('object');
+    });
+
+    it('should return the primitive string representation of a function', function() {
+      expect(str(function f() {})).to.be.a('string').and.to.equals('function f() {}').and.to.not.be.an('object');
+    });
+
+    it('should return the primitive string representation of a class', function() {
+      expect(str(class c {})).to.be.a('string').and.to.equals('class c {}').and.to.not.be.an('object');
+    });
+
+    it('should return the primitive string representation of an error', function() {
+      expect(str(new Error('error'))).to.be.a('string').and.to.equals('Error: error').and.to.not.be.an('object');
+    });
+
+    it('should return the primitive string representation of an array', function() {
+      expect(str([])).to.be.a('string').and.to.equals('').and.to.not.be.an('object');
+      expect(str([1, 2, 3])).to.be.a('string').and.to.equals('1,2,3').and.to.not.be.an('object');
+      expect(str([[1, 2], [3, 4, 5]])).to.be.a('string').and.to.equals('1,2,3,4,5').and.to.not.be.an('object');
+      expect(str(Array(5))).to.be.a('string').and.to.equals(',,,,').and.to.not.be.an('object');
+      expect(str(new Array(1, 2, 3))).to.be.a('string').and.to.equals('1,2,3').and.to.not.be.an('object');
+    });
+
+    it('should return undefined when casting an object', function() {
+      expect(str({})).to.be.undefined;
+      expect(str({ x: 5 })).to.be.undefined;
+      expect(str(new function() {})).to.be.undefined;
+    });
+
+    it('should return undefined when casting a map', function() {
+      expect(str(new Map())).to.be.undefined;
+    });
+
+    it('should return undefined when casting a set', function() {
+      expect(str(new Set())).to.be.undefined;
+    });
+
+    it('should return undefined when casting a weakmap', function() {
+      expect(str(new WeakMap())).to.be.undefined;
+    });
+
+    it('should return undefined when casting a weakset', function() {
+      expect(str(new WeakSet())).to.be.undefined;
+    });
+
+    it('should return undefined when casting undefined', function() {
+      expect(str(undefined)).to.be.undefined;
+    });
+
+    it('should return undefined when casting null', function() {
+      expect(str(null)).to.be.undefined;
+    });
+
+    it('should return undefined when casting NaN', function() {
+      expect(str(NaN)).to.be.undefined;
+    });
+  });
+
   context('when using number', function() {
     it('should return the primitive number value of a number', function() {
       expect(number(0)).to.be.a('number').and.to.equals(0).and.to.not.be.an('object');

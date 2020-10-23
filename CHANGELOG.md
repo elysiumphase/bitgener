@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.2.8 - delivery @23/10/2020
+
+- improve LibError error library
+- update LibError usage
+- add LibError tests
+- update Readme
+
 ## 1.2.7 - delivery @08/10/2020
 
 - fix Ean codes so they are built from right to left and not the opposite
