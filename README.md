@@ -33,7 +33,7 @@
 - [Contributing](#contributing)
 - [Support](#support)
 - [Security](#security)
-- [Licence](#licence)
+- [License](#license)
 
 # Presentation
 
@@ -544,5 +544,5 @@ Please see our [Support](.github/SUPPORT.md) page if you have any questions or f
 # Security
 For any security concerns or issues, please visit our [Security Policy](.github/SECURITY.md) page.
 
-# Licence
+# License
 [MIT](LICENSE.md).

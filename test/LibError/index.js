@@ -100,7 +100,7 @@ describe('#LibError', function() {
       expect(error.constructor.name).to.equals('LibError');
     });
 
-    it('should return an unknown error with the origin error\'s code/message/name as a message if not a standard error and stack including origin stack', function() {
+    it('should return an unknown error with the origin error\'s code/message/name as a message if not a standard error and having the origin error stack', function() {
       let err = new URIError('uri not available');
       let error = LibError.format(err);
 
@@ -109,7 +109,9 @@ describe('#LibError', function() {
       expect(error.message).to.equals('uri not available');
       expect(error.name).to.equals('LibError');
       expect(error.constructor.name).to.equals('LibError');
-      expect(error.stack).to.be.a('string').and.to.include(err.stack);
+      expect(error.originStack).to.be.a('string').and.to.equals(`\n${err.stack}`);
+      expect(error.toString()).to.be.a('string').and.to.include(error.stack);
+      expect(error.toString()).to.be.a('string').and.to.include(err.stack);
 
       err = new URIError();
       error = LibError.format(err);
@@ -119,7 +121,9 @@ describe('#LibError', function() {
       expect(error.message).to.equals('URIError');
       expect(error.name).to.equals('LibError');
       expect(error.constructor.name).to.equals('LibError');
-      expect(error.stack).to.be.a('string').and.to.include(err.stack);
+      expect(error.originStack).to.be.a('string').and.to.equals(`\n${err.stack}`);
+      expect(error.toString()).to.be.a('string').and.to.include(error.stack);
+      expect(error.toString()).to.be.a('string').and.to.include(err.stack);
 
       err = new Error();
       error = LibError.format(err);
@@ -129,7 +133,9 @@ describe('#LibError', function() {
       expect(error.message).to.equals('unknown error');
       expect(error.name).to.equals('LibError');
       expect(error.constructor.name).to.equals('LibError');
-      expect(error.stack).to.be.a('string').and.to.include(err.stack);
+      expect(error.originStack).to.be.a('string').and.to.equals(`\n${err.stack}`);
+      expect(error.toString()).to.be.a('string').and.to.include(error.stack);
+      expect(error.toString()).to.be.a('string').and.to.include(err.stack);
 
       err = new Error();
       err.code = 'ORIGIN_ERROR_CODE'
@@ -140,7 +146,9 @@ describe('#LibError', function() {
       expect(error.message).to.equals('ORIGIN_ERROR_CODE');
       expect(error.name).to.equals('LibError');
       expect(error.constructor.name).to.equals('LibError');
-      expect(error.stack).to.be.a('string').and.to.include(err.stack);
+      expect(error.originStack).to.be.a('string').and.to.equals(`\n${err.stack}`);
+      expect(error.toString()).to.be.a('string').and.to.include(error.stack);
+      expect(error.toString()).to.be.a('string').and.to.include(err.stack);
     });
   });
 
@@ -236,7 +244,7 @@ describe('#LibError', function() {
       expect(error.constructor.name).to.equals('LibError');
     });
 
-    it('should create a lib error with a stack trace including origin error\'s stack', function() {
+    it('should create a lib error with the origin error stack trace and to be included in toString format', function() {
       const origin = new URIError('bad uri');
       const error = new LibError({}, origin);
 
@@ -245,7 +253,9 @@ describe('#LibError', function() {
       expect(error.message).to.equals('bad uri');
       expect(error.name).to.equals('LibError');
       expect(error.constructor.name).to.equals('LibError');
-      expect(error.stack).to.be.a('string').and.to.include(origin.stack);
+      expect(error.originStack).to.be.a('string').and.to.equals(`\n${origin.stack}`);
+      expect(error.toString()).to.be.a('string').and.to.include(error.stack);
+      expect(error.toString()).to.be.a('string').and.to.include(origin.stack);
     });
   });
 });

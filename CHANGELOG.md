@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.2.9 - delivery @15/02/2021
+
+- improve LibError error library
+- add tests
+- fix Readme typo
+
 ## 1.2.8 - delivery @23/10/2020
 
 - improve LibError error library
