@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.2.10 - delivery @12/06/2021
+
+- update TODO
+- update dev dependencies
+
 ## 1.2.9 - delivery @15/02/2021
 
 - improve LibError error library
