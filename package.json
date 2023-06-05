@@ -1,9 +1,9 @@
 {
   "name": "bitgener",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "A lightweight and zero-dependencies pure Node.js barcode generator",
-  "author": "Adrien Valcke <adrienvalcke@icloud.com> (https://github.com/adrienv1520)",
-  "main": "lib/index.js",
+  "author": "Elysium Phase <hi@elysiumphase.com> (https://github.com/elysiumphase)",
+  "main": "src/index.js",
   "private": false,
   "preferGlobal": false,
   "analyze": false,
@@ -13,13 +13,12 @@
     "npm": ">=5.6.0"
   },
   "scripts": {
-    "test:lint": "eslint lib/",
-    "test:unit": "NODE_ENV=test mocha test/* --exit",
-    "test": "npm run test:lint && npm run test:unit"
+    "lint": "eslint src/",
+    "test": "NODE_ENV=test mocha test/* --exit"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adrienv1520/bitgener.git"
+    "url": "https://github.com/elysiumphase/bitgener.git"
   },
   "keywords": [
     "node.js",
@@ -45,14 +44,13 @@
     "msi"
   ],
   "files": [
-    "lib"
+    "src"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "chai": "~4.3.4",
-    "eslint": "~7.28.0",
-    "eslint-config-airbnb-base": "~14.2.1",
-    "eslint-plugin-import": "~2.23.4",
-    "mocha": "~9.0.0"
+    "chai": "4.3.7",
+    "eslint": "8.42.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "mocha": "10.2.0"
   }
 }

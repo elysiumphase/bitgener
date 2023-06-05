@@ -1,5 +1,5 @@
 const { expect } = require('../Common');
-const LibError = require('../../lib/LibError');
+const LibError = require('../../src/LibError');
 
 describe('#LibError', function() {
   context('when using format', function() {

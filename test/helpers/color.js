@@ -1,5 +1,5 @@
 const { expect } = require('../Common');
-const { color: { isColor } } = require('../../lib/helpers');
+const { color: { isColor } } = require('../../src/helpers');
 
 describe('#helpers color', function() {
   context('when using isColor', function() {

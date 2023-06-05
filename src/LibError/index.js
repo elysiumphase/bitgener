@@ -21,7 +21,7 @@ const { is, exists } = require('../helpers/object');
 const Codes = require('./Codes');
 
 class LibError extends Error {
-  constructor({ code, message, name } = {}, originError) {
+  constructor({ code, message, name } = {}, originError = '') {
     super();
     const originMessage = is(Error, originError) ? originError.message : '';
 
