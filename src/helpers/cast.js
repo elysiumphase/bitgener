@@ -1,5 +1,5 @@
 /**
- * Type casting helper from consis (https://github.com/adrienv1520/consis).
+ * Type casting helper from consis (https://github.com/elysiumphase/consis).
  *
  *    - str(thing) -> String or undefined
  *    - num(thing, { le, ge } = {}) -> Number or undefined

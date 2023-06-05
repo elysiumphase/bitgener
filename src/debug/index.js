@@ -1,5 +1,5 @@
 /**
- * from bugbug https://github.com/adrienv1520/bugbug
+ * from bugbug https://github.com/elysiumphase/bugbug
  *
  * debugger, made simple
  */

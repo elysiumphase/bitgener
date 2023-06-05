@@ -1,7 +1,7 @@
 const { expect } = require('../Common');
-const Debugger = require('../../lib/debug/Debugger');
-const { unknownDebuggerName } = require('../../lib/debug/config');
-const { set, reset, restrictedColors, colors } = require('../../lib/debug/font');
+const Debugger = require('../../src/debug/Debugger');
+const { unknownDebuggerName } = require('../../src/debug/config');
+const { set, reset, restrictedColors, colors } = require('../../src/debug/font');
 const initialDebugEnv = process.env.DEBUG;
 
 describe('#debug Debugger', function() {
