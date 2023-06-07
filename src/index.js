@@ -1,14 +1,5 @@
 /**
  * Bitgener
- *
- * A lightspeed and zero-dependencies Node.js barcode generator.
- *
- * This code is based on BarCode Coder Library.
- * BCCL v2.0
- * From jQuery barcode plugin v2.0.3
- * http://barcode-coder.com/en/
- *
- * Author: Adrien Valcke <adrienvalcke@icloud.com>
  */
 const debug = require('./debug')('bitgener', 'red');
 const Barcode = require('./Barcode');

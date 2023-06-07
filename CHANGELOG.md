@@ -1,6 +1,10 @@
 # CHANGELOG
 
-## 1.2.11 - delivery @15/06/2023
+## 1.2.12 - delivery @07/06/2023
+
+- docs: fix author
+
+## 1.2.11 - delivery @06/06/2023
 
 - chore: update dev dependencies
 - docs: update readme and other docs
