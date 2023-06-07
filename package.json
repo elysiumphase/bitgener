@@ -1,6 +1,6 @@
 {
   "name": "bitgener",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "A lightweight and zero-dependencies pure Node.js barcode generator",
   "author": "Elysium Phase <hi@elysiumphase.com> (https://github.com/elysiumphase)",
   "main": "src/index.js",

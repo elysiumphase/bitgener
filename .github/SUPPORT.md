@@ -7,7 +7,7 @@ please see our [security page](SECURITY.md).
 If you're looking for programming help,
 for answers to questions,
 or to discuss with the team,
-please feel free to contact the project team at **adrienvalcke@icloud.com**.
+please feel free to contact the project team at **hi@elysiumphase.com**.
 
 If you'd like to contribute to Bitgener,
 see our [Contributing Guidelines](CONTRIBUTING.md)
